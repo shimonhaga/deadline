@@ -2,7 +2,6 @@
 
 use PHPUnit\Framework\TestCase;
 use Shimoning\Deadline\ThisMonthLastBusinessDay;
-use Carbon\Carbon;
 
 class ThisMonthLastBusinessDayTest extends TestCase
 {
@@ -21,7 +20,7 @@ class ThisMonthLastBusinessDayTest extends TestCase
 
     public function test20200430_000000()
     {
-        // normally
+        // init
         $deadline = new ThisMonthLastBusinessDay(2020, 4, 20);
 
         // get deadline
@@ -36,7 +35,7 @@ class ThisMonthLastBusinessDayTest extends TestCase
 
     public function test20200429_000000()
     {
-        // normally
+        // init
         $deadline = new ThisMonthLastBusinessDay(2020, 4, 20);
 
         // set sub days
@@ -54,11 +53,10 @@ class ThisMonthLastBusinessDayTest extends TestCase
 
     public function test20200424_000000()
     {
-        // normally
+        // init
         $deadline = new ThisMonthLastBusinessDay(2020, 4, 20);
 
         // set sub days
-        $deadline->setBehaviorIfNotWeekday(-1);
         $deadline->setSubDays(4);
 
         // get deadline
