@@ -22,7 +22,7 @@ class ThisMonthLastBusinessDay extends Deadline
         $this->setDate(
             $this->date->clone()
                 ->lastOfMonth() // 月末
-                ->subDay($this->subDays)      // 月初
+                ->subDay($this->subDays)
         );
 
         return $this->get($hours, $minutes, $seconds);

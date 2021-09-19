@@ -47,6 +47,14 @@ class Deadline
             : Carbon::now();
     }
 
+    public function __destruct()
+    {
+        $this->setWeekendDays([
+            Carbon::SATURDAY,
+            Carbon::SUNDAY,
+        ]);
+    }
+
     /**
      * Setter
      *
@@ -116,6 +124,16 @@ class Deadline
     ]) {
         // TODO: replace using macro case
         $this->date->setWeekendDays($days);
+    }
+
+    /**
+     * Get weekend setting
+     *
+     * @return array
+     */
+    public function getWeekendDays()
+    {
+        return $this->date->getWeekendDays();
     }
 
     /**
