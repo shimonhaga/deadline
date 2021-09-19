@@ -162,7 +162,7 @@ class Deadline
      *
      * @return boolean
      */
-    public function exceeded(): bool
+    public function isExceeded(): bool
     {
         $now = Carbon::now();
         return $now->gt($this->date);

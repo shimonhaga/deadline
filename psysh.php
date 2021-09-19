@@ -9,7 +9,7 @@ echo __NAMESPACE__ . " shell\n";
 echo "-----\nexample:\n";
 echo "  \$deadline = new NextMonthFirstBusinessDay(2020, 8, 15);\n";
 echo "  \$deadline(12);\n";
-echo "  \$deadline->exceeded();\n";
+echo "  \$deadline->isExceeded();\n";
 echo "-----\n\n";
 
 $sh = new \Psy\Shell();

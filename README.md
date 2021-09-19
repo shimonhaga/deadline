@@ -29,7 +29,7 @@ $deadline = new Deadline(2020, 4, 20);
 // TODO: write
 
 // get deadline
-$deadline->get();
+$deadline->get();   //
 
 // set hour
 $deadline->get(12);
@@ -40,8 +40,8 @@ $deadline->get(12, 30);
 // set hour, minute and second
 $deadline->get(11, 59, 59);
 
-// get exceeded
-$deadline->exceeded();
+// check exceeded or not
+$deadline->isExceeded();
 ```
 
 ## Options
@@ -63,7 +63,7 @@ $deadline->isHoliday(); // true or false
 $deadline->setWeekendDays([Carbon::SUNDAY])
 ```
 
-### 週末か判定する。
+#### 週末か判定する。
 ```php
 $deadline->isWeekend(); // true or false
 ```
@@ -77,8 +77,8 @@ $deadline->setBehaviorIfNotWeekday(-1);  // 前の日にずらす
 ```
 
 例) 対象日が 2021-09-05 (日) かつ、週末設定が土日の場合。
-`1` を設定すると、 2021-09-06 (月) になる。
-`-1` を設定すると、 2021-09-03 (金) になる。
+- `1` を設定すると、 2021-09-06 (月) になる。
+- `-1` を設定すると、 2021-09-03 (金) になる。
 
 ### 基準日の設定
 ```php
@@ -87,4 +87,27 @@ $deadline->setBaseDay(1);
 
 // 末日
 $deadline->setBaseDay('t');
+```
+
+## Specific utilities
+
+### ThisMonthLastBusinessDay
+今月の最終営業日を取得する
+
+
+### NextMonthFirstBusinessDay
+翌月の最初の営業日を取得する
+
+## CLI
+コマンドラインでライブラリを試す
+
+```cli
+./psysh.php
+```
+
+## Unit Test
+ユニットテストを実行する
+
+```cli
+composer test
 ```
