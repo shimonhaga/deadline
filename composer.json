@@ -1,0 +1,32 @@
+{
+    "name": "shimoning/deadline",
+    "version": "0.1.0",
+    "description": "締め日を指定して期間を計算する",
+    "minimum-stability": "stable",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shimon Haga",
+            "email": "shimon.haga@shimoning.com"
+        }
+    ],
+    "keywords": [
+        "period",
+        "closing",
+        "date",
+        "deadline"
+    ],
+    "require": {
+        "nesbot/carbon": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Shimoning\\Deadline\\": "src/"
+        }
+    },
+    "require-dev": {
+        "psy/psysh": "@stable",
+        "phpunit/phpunit": "^9.5"
+    }
+}
