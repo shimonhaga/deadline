@@ -21,7 +21,8 @@ class NextMonthFirstBusinessDay extends Deadline
         // Move day
         $this->setDate(
             $this->date->clone()
-                ->addMonth()                        // 翌月
+                ->lastOfMonth() // 当月末
+                ->addDay()      // 翌月初日
                 ->setDay($this->firstDayOfMonth)    // 開始日
         );
 

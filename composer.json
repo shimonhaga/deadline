@@ -1,6 +1,6 @@
 {
     "name": "shimoning/deadline",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "締め日を指定して期間を計算する",
     "minimum-stability": "stable",
     "type": "library",

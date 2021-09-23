@@ -71,4 +71,19 @@ class NextMonthFirstBusinessDayTest extends TestCase
         $this->assertEquals(0, $date->minute);
         $this->assertEquals(0, $date->second);
     }
+
+    public function test20210901_000000()
+    {
+        // init
+        $deadline = new NextMonthFirstBusinessDay(2021, 8, 31);
+
+        // get deadline
+        $date = $deadline();
+        $this->assertEquals(2021, $date->year);
+        $this->assertEquals(9, $date->month);
+        $this->assertEquals(1, $date->day);
+        $this->assertEquals(0, $date->hour);
+        $this->assertEquals(0, $date->minute);
+        $this->assertEquals(0, $date->second);
+    }
 }
